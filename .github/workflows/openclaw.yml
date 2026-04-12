@@ -2,6 +2,8 @@ name: Build and Push OpenClaw Docker Image
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * 0'     # 每周日 UTC 00:00 自动执行一次（即每周一次）
 
 jobs:
   build:
